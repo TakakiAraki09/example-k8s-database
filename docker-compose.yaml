@@ -1,0 +1,6 @@
+services:
+  db:
+    build: .
+    container_name: "db-container"
+    ports:
+      - "3306:3306"
