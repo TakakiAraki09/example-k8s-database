@@ -2,5 +2,9 @@ services:
   db:
     build: .
     container_name: "db-container"
+    environment:
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      MYSQL_ROOT_PASSWORD: root
     ports:
       - "3306:3306"
