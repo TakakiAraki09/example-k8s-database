@@ -2,17 +2,17 @@
 
 [atlasgo](https://atlasgo.io/)
 
+https://atlasgo.io/atlas-schema/projects
+
 `$ curl -sSf https://atlasgo.sh | sh`
 
 https://zenn.dev/katonium/articles/atlas-rakuraku-migration
 
 ## スキーマを取り込む
 
-atlas schema inspect -u "mysql://root:password@127.0.0.1:3306" > ./schema/example_database.hcl
-
-- `$ atlas schema inspect -u "mysql://root:password@127.0.0.1:3306/example_database" > ./schema/example_database.hcl`
-- `$ atlas schema inspect -u "mysql://root:password@127.0.0.1:3306/example_database" --format '{{ sql . }}' > ./schema/2_schema.sql`
-- `$ atlas schema apply -u "mysql://root:password@127.0.0.1:3306/example_database" --to file://schema/example_database.hcl`
+- `$ atlas schema inspect --env local`
+- `$ atlas schema inspect --env local --format '{{ sql . }}' > generated/example_database.sql`
+- `$ atlas schema apply --env local`
 
 ## docker composeのイメージ削除
 
@@ -20,4 +20,4 @@ atlas schema inspect -u "mysql://root:password@127.0.0.1:3306" > ./schema/exampl
 
 ## スキーマの適用
 
-# example-k8s-database
+- [HCL - schema](https://atlasgo.io/atlas-schema/hcl)
