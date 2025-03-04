@@ -6,19 +6,29 @@ table "todos" {
     unsigned       = true
     auto_increment = true
   }
-  column "title" {
+  column "user_id" {
+    null = false
+    type = int
+    unsigned = true
+  }
+
+  column "text" {
     null = true
     type = varchar(100)
   }
-  column "description" {
+  column "done" {
     null = true
     type = varchar(100)
-  }
-  column "state" {
-    type = varchar(100)
-    default = "OK"
   }
   primary_key {
     columns = [column.id]
   }
+
+  foreign_key "user_id" {
+    columns = [column.user_id]
+    ref_columns = [table.users.column.id]
+    on_update = NO_ACTION
+    on_delete = NO_ACTION
+  }
 }
+

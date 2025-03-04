@@ -14,13 +14,13 @@ variable "addr" {
 
 locals {
   base_url = "mysql://${var.user}:${var.pass}@${var.addr}"
-  example_database  = "${local.base_url}/db2"
+  example_database  = "${local.base_url}/example_database"
 }
 
 env "local" {
   // Declare where the schema definition resides.
   // Also supported: ["file://multi.hcl", "file://schema.hcl"].
-  src = ileset("schema/*.hcl")
+  src = fileset("schema/*.hcl")
 
   // Define the URL of the database which is managed
   // in this environment.

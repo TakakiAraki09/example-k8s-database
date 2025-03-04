@@ -1,4 +1,4 @@
-table "example_table" {
+table "users" {
   schema = schema.example_database
   column "id" {
     null           = false
@@ -6,15 +6,7 @@ table "example_table" {
     unsigned       = true
     auto_increment = true
   }
-  column "title" {
-    null = true
-    type = varchar(100)
-  }
-  column "hoge" {
-    null = true
-    type = varchar(100)
-  }
-  column "fuga" {
+  column "name" {
     null = true
     type = varchar(100)
   }
