@@ -21,3 +21,7 @@ https://zenn.dev/katonium/articles/atlas-rakuraku-migration
 ## スキーマの適用
 
 - [HCL - schema](https://atlasgo.io/atlas-schema/hcl)
+
+## local url
+
+mysql://127.0.0.1:3306/?allowPublicKeyRetrieval=true&useSSL=false
