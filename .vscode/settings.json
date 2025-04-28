@@ -1,0 +1,6 @@
+{
+  "files.associations": {
+    "*.hcl": "atlas-rule-mysql",
+    "atlas.hcl": "atlas-config",
+  },
+}
